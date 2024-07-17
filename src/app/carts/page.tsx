@@ -114,7 +114,7 @@ const CartsTablePage = () => {
                 </th>
                 <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
                   Creation date
-                </th>
+                </th> 
                 <th className="min-w-[120px] px-4 py-4 font-medium text-dark dark:text-white">
                   Action
                 </th>
