@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import Cookies from "universal-cookie";
+
 
 // Define the type for the form data
 interface FormData {
@@ -39,6 +41,11 @@ export default function SigninWithPassword() {
       });
 
       if (response.ok) {
+        const result = await response.json();
+        const cookies = new Cookies();
+        console.log (response)
+        cookies.set("accessToken", result.token, { path: "/" });
+
         alert("Valid credentials");
         window.location.href="/dashboard"
       } else {
